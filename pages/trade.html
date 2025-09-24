@@ -1,0 +1,846 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>NEONCrypto</title>
+        <link rel="stylesheet" href="../css/global.css" />
+        <link rel="stylesheet" href="../css/forms.css" />
+        <link rel="icon" href="../images/favico.ico" type="image/x-icon" />
+        <link rel="icon" href="../images/favico.svg" type="image/x-icon" />
+    </head>
+    <body>
+        <header>
+            <div class="header-leftside">
+                <a href="../index.html">
+                    <img
+                        src="../images/Logo.svg"
+                        alt="NEONCrypto"
+                        class="header-logo"
+                    />
+                </a>
+                <nav>
+                    <ul class="menu">
+                        <li>
+                            <a href="./trade.html" class="active-page-title"
+                                >Торговля</a
+                            >
+                        </li>
+                        <li><a href="./analytics.html">Аналитика</a></li>
+                        <li><a href="./news.html">Новости</a></li>
+                        <li><a href="./markets.html">Рынки</a></li>
+                        <li><a href="./support.html">Поддержка</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="header-rightside">
+                <button
+                    class="auth-button not-mobile"
+                    onclick="window.location.href = './forms/login.html'"
+                >
+                    Авторизация
+                </button>
+                <div class="burger-toggle" id="burger-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <nav class="mobile-menu" id="mobile-menu">
+                    <ul>
+                        <li>
+                            <button
+                                class="auth-button"
+                                onclick="window.location.href = './forms/login.html'"
+                            >
+                                Авторизация
+                            </button>
+                        </li>
+                        <li>
+                            <a href="./trade.html" class="active-page-title"
+                                >Торговля</a
+                            >
+                        </li>
+                        <li><a href="./analytics.html">Аналитика</a></li>
+                        <li><a href="./news.html">Новости</a></li>
+                        <li><a href="./markets.html">Рынки</a></li>
+                        <li><a href="./support.html">Поддержка</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="overlay" id="overlay"></div>
+        </header>
+        <main>
+            <div class="second-layout-container">
+                <section class="layout second-layout second-layout-with-table">
+                    <h2>Популярное</h2>
+                    <div class="second-layout-table-container">
+                        <table class="second-table">
+                            <tbody>
+                                <tr>
+                                    <td class="third-table-coin">
+                                        <img
+                                            src="../images/icons/crypto-icons/btc.svg"
+                                            alt="btc-icon"
+                                        />
+                                        BTC
+                                    </td>
+                                    <td class="third-table-price">113856.69</td>
+                                    <td class="third-table-changes percent-up">
+                                        +1.49%
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="third-table-coin">
+                                        <img
+                                            src="../images/icons/crypto-icons/eth.svg"
+                                            alt="eth-icon"
+                                        />
+                                        ETH
+                                    </td>
+                                    <td class="third-table-price">4416.5</td>
+                                    <td class="third-table-changes percent-up">
+                                        +0.82%
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="third-table-coin">
+                                        <img
+                                            src="../images/icons/crypto-icons/xrp.svg"
+                                            alt="xrp-icon"
+                                        />
+                                        XRP
+                                    </td>
+                                    <td class="third-table-price">3.002</td>
+                                    <td class="third-table-changes percent-up">
+                                        +0.29%
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+                <section class="layout second-layout buy-form-container">
+                    <div class="buy-form-actions">
+                        <button id="buy-crypto-btn" class="buy-form-btn active">
+                            Купить
+                        </button>
+                        <button id="sale-crypto-btn" class="buy-form-btn">
+                            Продать
+                        </button>
+                    </div>
+                    <form class="buy-form" id="trade-form" action="">
+                        <div class="input-box">
+                            <label for="input-summ">Списать</label>
+                            <div class="input-summ-container">
+                                <input
+                                    type="text"
+                                    class="input-summ"
+                                    placeholder="Сумма"
+                                    required
+                                    id="input-summ"
+                                />
+                                <select class="select-coin" id="coin">
+                                    <option value="btc">BTC</option>
+                                    <option value="eth">ETH</option>
+                                    <option value="usdt" selected>USDT</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="input-box">
+                            <label for="input-summ2">Получить</label>
+                            <div class="input-summ-container">
+                                <input
+                                    type="text"
+                                    class="input-summ"
+                                    placeholder="0.00"
+                                    readonly
+                                    id="input-summ2"
+                                />
+                                <select class="select-coin" id="coin2">
+                                    <option value="btc">BTC</option>
+                                    <option value="eth">ETH</option>
+                                    <option value="usdt">USDT</option>
+                                </select>
+                            </div>
+                        </div>
+                        <button type="submit" class="submit-button" id="buy">
+                            Купить
+                        </button>
+                    </form>
+                </section>
+            </div>
+            <div class="second-layout-container">
+                <section class="layout second-layout second-layout-with-table">
+                    <h2 class="layout-title only-one-word-title">Спот</h2>
+                    <div class="second-layout-row">
+                        <h2>Популярное в споте</h2>
+                        <a href=""
+                            ><span>Подробнее</span>
+                            <svg
+                                width="20"
+                                height="20"
+                                viewBox="0 0 20 20"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                            >
+                                <path
+                                    d="M2.20791 17.4329C1.82535 16.867 1.97073 16.4089 2.64403 16.0586L15.5899 9.63155V10.2581L2.64403 3.95231C1.98603 3.60198 1.84066 3.13714 2.20791 2.55776C2.59047 1.97838 3.11076 1.85038 3.76876 2.17375L17.1966 8.76248C17.7322 9.03196 18 9.41596 18 9.9145C18 10.4939 17.7322 10.9116 17.1966 11.1676L3.76876 17.8169C3.11076 18.1538 2.59047 18.0258 2.20791 17.4329Z"
+                                    fill="currentColor"
+                                />
+                            </svg>
+                        </a>
+                    </div>
+                    <div class="second-layout-table-container">
+                        <table class="second-table">
+                            <tbody>
+                                <tr>
+                                    <td class="third-table-coin">
+                                        <img
+                                            src="../images/icons/crypto-icons/btc.svg"
+                                            alt="btc-icon"
+                                        />
+                                        BTC
+                                    </td>
+                                    <td class="third-table-price">113856.69</td>
+                                    <td class="third-table-changes percent-up">
+                                        +1.49%
+                                    </td>
+                                    <td>
+                                        <button class="trade-btn">
+                                            Торговать
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="third-table-coin">
+                                        <img
+                                            src="../images/icons/crypto-icons/eth.svg"
+                                            alt="eth-icon"
+                                        />
+                                        ETH
+                                    </td>
+                                    <td class="third-table-price">4416.5</td>
+                                    <td class="third-table-changes percent-up">
+                                        +0.82%
+                                    </td>
+                                    <td>
+                                        <button class="trade-btn">
+                                            Торговать
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="third-table-coin">
+                                        <img
+                                            src="../images/icons/crypto-icons/xrp.svg"
+                                            alt="xrp-icon"
+                                        />
+                                        XRP
+                                    </td>
+                                    <td class="third-table-price">3.002</td>
+                                    <td class="third-table-changes percent-up">
+                                        +0.29%
+                                    </td>
+                                    <td>
+                                        <button class="trade-btn">
+                                            Торговать
+                                        </button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+                <section class="layout second-layout second-layout-with-table">
+                    <div class="second-layout-row">
+                        <h2>Новинки</h2>
+                        <a href=""
+                            ><span>Подробнее</span>
+                            <svg
+                                width="20"
+                                height="20"
+                                viewBox="0 0 20 20"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                            >
+                                <path
+                                    d="M2.20791 17.4329C1.82535 16.867 1.97073 16.4089 2.64403 16.0586L15.5899 9.63155V10.2581L2.64403 3.95231C1.98603 3.60198 1.84066 3.13714 2.20791 2.55776C2.59047 1.97838 3.11076 1.85038 3.76876 2.17375L17.1966 8.76248C17.7322 9.03196 18 9.41596 18 9.9145C18 10.4939 17.7322 10.9116 17.1966 11.1676L3.76876 17.8169C3.11076 18.1538 2.59047 18.0258 2.20791 17.4329Z"
+                                    fill="currentColor"
+                                />
+                            </svg>
+                        </a>
+                    </div>
+                    <div class="second-layout-table-container">
+                        <table class="second-table">
+                            <tbody>
+                                <tr>
+                                    <td class="third-table-coin">
+                                        <img
+                                            src="../images/icons/crypto-icons/avnt.svg"
+                                            alt="avnt-icon"
+                                        />
+                                        AVNT
+                                    </td>
+                                    <td class="third-table-price">1.28</td>
+                                    <td class="third-table-changes percent-up">
+                                        +59.80%
+                                    </td>
+                                    <td>
+                                        <button class="trade-btn">
+                                            Торговать
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="third-table-coin">
+                                        <img
+                                            src="../images/icons/crypto-icons/pump.svg"
+                                            alt="pump-icon"
+                                        />
+                                        PUMP
+                                    </td>
+                                    <td class="third-table-price">0.0078</td>
+                                    <td
+                                        class="third-table-changes percent-down"
+                                    >
+                                        -2.33%
+                                    </td>
+                                    <td>
+                                        <button class="trade-btn">
+                                            Торговать
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="third-table-coin">
+                                        <img
+                                            src="../images/icons/crypto-icons/holo.svg"
+                                            alt="holo-icon"
+                                        />
+                                        HOLO
+                                    </td>
+                                    <td class="third-table-price">1.40</td>
+                                    <td
+                                        class="third-table-changes percent-down"
+                                    >
+                                        -5.45%
+                                    </td>
+                                    <td>
+                                        <button class="trade-btn">
+                                            Торговать
+                                        </button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+            </div>
+            <div class="second-layout-container">
+                <section class="layout second-layout second-layout-with-table">
+                    <h2 class="layout-title only-one-word-title">Маржа</h2>
+                    <div class="second-layout-row">
+                        <h2>Популярное в марже</h2>
+                        <a href=""
+                            ><span>Подробнее</span>
+                            <svg
+                                width="20"
+                                height="20"
+                                viewBox="0 0 20 20"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                            >
+                                <path
+                                    d="M2.20791 17.4329C1.82535 16.867 1.97073 16.4089 2.64403 16.0586L15.5899 9.63155V10.2581L2.64403 3.95231C1.98603 3.60198 1.84066 3.13714 2.20791 2.55776C2.59047 1.97838 3.11076 1.85038 3.76876 2.17375L17.1966 8.76248C17.7322 9.03196 18 9.41596 18 9.9145C18 10.4939 17.7322 10.9116 17.1966 11.1676L3.76876 17.8169C3.11076 18.1538 2.59047 18.0258 2.20791 17.4329Z"
+                                    fill="currentColor"
+                                />
+                            </svg>
+                        </a>
+                    </div>
+                    <div class="second-layout-table-container">
+                        <table class="second-table">
+                            <tbody>
+                                <tr>
+                                    <td class="third-table-coin">
+                                        <img
+                                            src="../images/icons/crypto-icons/btc.svg"
+                                            alt="btc-icon"
+                                        />
+                                        BTC
+                                    </td>
+                                    <td class="third-table-price">113856.69</td>
+                                    <td class="third-table-changes percent-up">
+                                        +1.49%
+                                    </td>
+                                    <td>
+                                        <button class="trade-btn">
+                                            Торговать
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="third-table-coin">
+                                        <img
+                                            src="../images/icons/crypto-icons/eth.svg"
+                                            alt="eth-icon"
+                                        />
+                                        ETH
+                                    </td>
+                                    <td class="third-table-price">4416.5</td>
+                                    <td class="third-table-changes percent-up">
+                                        +0.82%
+                                    </td>
+                                    <td>
+                                        <button class="trade-btn">
+                                            Торговать
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="third-table-coin">
+                                        <img
+                                            src="../images/icons/crypto-icons/xrp.svg"
+                                            alt="xrp-icon"
+                                        />
+                                        XRP
+                                    </td>
+                                    <td class="third-table-price">3.002</td>
+                                    <td class="third-table-changes percent-up">
+                                        +0.29%
+                                    </td>
+                                    <td>
+                                        <button class="trade-btn">
+                                            Торговать
+                                        </button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+                <section class="layout second-layout second-layout-with-table">
+                    <div class="second-layout-row">
+                        <h2>Новинки</h2>
+                        <a href=""
+                            ><span>Подробнее</span>
+                            <svg
+                                width="20"
+                                height="20"
+                                viewBox="0 0 20 20"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                            >
+                                <path
+                                    d="M2.20791 17.4329C1.82535 16.867 1.97073 16.4089 2.64403 16.0586L15.5899 9.63155V10.2581L2.64403 3.95231C1.98603 3.60198 1.84066 3.13714 2.20791 2.55776C2.59047 1.97838 3.11076 1.85038 3.76876 2.17375L17.1966 8.76248C17.7322 9.03196 18 9.41596 18 9.9145C18 10.4939 17.7322 10.9116 17.1966 11.1676L3.76876 17.8169C3.11076 18.1538 2.59047 18.0258 2.20791 17.4329Z"
+                                    fill="currentColor"
+                                />
+                            </svg>
+                        </a>
+                    </div>
+                    <div class="second-layout-table-container">
+                        <table class="second-table">
+                            <tbody>
+                                <tr>
+                                    <td class="third-table-coin">
+                                        <img
+                                            src="../images/icons/crypto-icons/avnt.svg"
+                                            alt="avnt-icon"
+                                        />
+                                        AVNT
+                                    </td>
+                                    <td class="third-table-price">1.28</td>
+                                    <td class="third-table-changes percent-up">
+                                        +59.80%
+                                    </td>
+                                    <td>
+                                        <button class="trade-btn">
+                                            Торговать
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="third-table-coin">
+                                        <img
+                                            src="../images/icons/crypto-icons/pump.svg"
+                                            alt="pump-icon"
+                                        />
+                                        PUMP
+                                    </td>
+                                    <td class="third-table-price">0.0078</td>
+                                    <td
+                                        class="third-table-changes percent-down"
+                                    >
+                                        -2.33%
+                                    </td>
+                                    <td>
+                                        <button class="trade-btn">
+                                            Торговать
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="third-table-coin">
+                                        <img
+                                            src="../images/icons/crypto-icons/holo.svg"
+                                            alt="holo-icon"
+                                        />
+                                        HOLO
+                                    </td>
+                                    <td class="third-table-price">1.40</td>
+                                    <td
+                                        class="third-table-changes percent-down"
+                                    >
+                                        -5.45%
+                                    </td>
+                                    <td>
+                                        <button class="trade-btn">
+                                            Торговать
+                                        </button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+            </div>
+            <div class="second-layout-container">
+                <section class="layout second-layout second-layout-with-table">
+                    <h2 class="layout-title only-one-word-title">Фьючерсы</h2>
+                    <div class="second-layout-row">
+                        <h2>Популярные Фьючерсы</h2>
+                        <a href=""
+                            ><span>Подробнее</span>
+                            <svg
+                                width="20"
+                                height="20"
+                                viewBox="0 0 20 20"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                            >
+                                <path
+                                    d="M2.20791 17.4329C1.82535 16.867 1.97073 16.4089 2.64403 16.0586L15.5899 9.63155V10.2581L2.64403 3.95231C1.98603 3.60198 1.84066 3.13714 2.20791 2.55776C2.59047 1.97838 3.11076 1.85038 3.76876 2.17375L17.1966 8.76248C17.7322 9.03196 18 9.41596 18 9.9145C18 10.4939 17.7322 10.9116 17.1966 11.1676L3.76876 17.8169C3.11076 18.1538 2.59047 18.0258 2.20791 17.4329Z"
+                                    fill="currentColor"
+                                />
+                            </svg>
+                        </a>
+                    </div>
+                    <div class="second-layout-table-container">
+                        <table class="second-table">
+                            <tbody>
+                                <tr>
+                                    <td class="third-table-coin">
+                                        <img
+                                            src="../images/icons/crypto-icons/btc.svg"
+                                            alt="btc-icon"
+                                        />
+                                        BTC
+                                    </td>
+                                    <td class="third-table-price">113856.69</td>
+                                    <td class="third-table-changes percent-up">
+                                        +1.49%
+                                    </td>
+                                    <td>
+                                        <button class="trade-btn">
+                                            Торговать
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="third-table-coin">
+                                        <img
+                                            src="../images/icons/crypto-icons/eth.svg"
+                                            alt="eth-icon"
+                                        />
+                                        ETH
+                                    </td>
+                                    <td class="third-table-price">4416.5</td>
+                                    <td class="third-table-changes percent-up">
+                                        +0.82%
+                                    </td>
+                                    <td>
+                                        <button class="trade-btn">
+                                            Торговать
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="third-table-coin">
+                                        <img
+                                            src="../images/icons/crypto-icons/xrp.svg"
+                                            alt="xrp-icon"
+                                        />
+                                        XRP
+                                    </td>
+                                    <td class="third-table-price">3.002</td>
+                                    <td class="third-table-changes percent-up">
+                                        +0.29%
+                                    </td>
+                                    <td>
+                                        <button class="trade-btn">
+                                            Торговать
+                                        </button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+                <section class="layout second-layout second-layout-with-table">
+                    <div class="second-layout-row">
+                        <h2>Новинки</h2>
+                        <a href=""
+                            ><span>Подробнее</span>
+                            <svg
+                                width="20"
+                                height="20"
+                                viewBox="0 0 20 20"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                            >
+                                <path
+                                    d="M2.20791 17.4329C1.82535 16.867 1.97073 16.4089 2.64403 16.0586L15.5899 9.63155V10.2581L2.64403 3.95231C1.98603 3.60198 1.84066 3.13714 2.20791 2.55776C2.59047 1.97838 3.11076 1.85038 3.76876 2.17375L17.1966 8.76248C17.7322 9.03196 18 9.41596 18 9.9145C18 10.4939 17.7322 10.9116 17.1966 11.1676L3.76876 17.8169C3.11076 18.1538 2.59047 18.0258 2.20791 17.4329Z"
+                                    fill="currentColor"
+                                />
+                            </svg>
+                        </a>
+                    </div>
+                    <div class="second-layout-table-container">
+                        <table class="second-table">
+                            <tbody>
+                                <tr>
+                                    <td class="third-table-coin">
+                                        <img
+                                            src="../images/icons/crypto-icons/avnt.svg"
+                                            alt="avnt-icon"
+                                        />
+                                        AVNT
+                                    </td>
+                                    <td class="third-table-price">1.28</td>
+                                    <td class="third-table-changes percent-up">
+                                        +59.80%
+                                    </td>
+                                    <td>
+                                        <button class="trade-btn">
+                                            Торговать
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="third-table-coin">
+                                        <img
+                                            src="../images/icons/crypto-icons/pump.svg"
+                                            alt="pump-icon"
+                                        />
+                                        PUMP
+                                    </td>
+                                    <td class="third-table-price">0.0078</td>
+                                    <td
+                                        class="third-table-changes percent-down"
+                                    >
+                                        -2.33%
+                                    </td>
+                                    <td>
+                                        <button class="trade-btn">
+                                            Торговать
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="third-table-coin">
+                                        <img
+                                            src="../images/icons/crypto-icons/holo.svg"
+                                            alt="holo-icon"
+                                        />
+                                        HOLO
+                                    </td>
+                                    <td class="third-table-price">1.40</td>
+                                    <td
+                                        class="third-table-changes percent-down"
+                                    >
+                                        -5.45%
+                                    </td>
+                                    <td>
+                                        <button class="trade-btn">
+                                            Торговать
+                                        </button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+            </div>
+            <section class="layout">
+                <h2 class="layout-title">P2P</h2>
+                <div class="p2p-table-container">
+                    <table class="p2p-table">
+                        <thead>
+                            <tr>
+                                <th class="p2p-title-maker">Мейкер</th>
+                                <th class="p2p-title-price">Цена</th>
+                                <th class="p2p-title-available">Доступно</th>
+                                <th class="p2p-title-bank">Оплата</th>
+                                <th class="p2p-title-buy">Покупка</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="p2p-maker">
+                                    <img
+                                        src="../images/default-profile-photo.jpg"
+                                        alt="ava"
+                                    />
+                                    USER_993
+                                </td>
+                                <td class="p2p-price">
+                                    1.00
+                                    <p>$1.00</p>
+                                </td>
+                                <td class="p2p-available">123,000.00 USDT</td>
+                                <td class="p2p-bank">BANK</td>
+                                <td>
+                                    <button class="trade-btn">Купить</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="p2p-maker">
+                                    <img
+                                        src="../images/avatars/gleb.jpg"
+                                        alt="ava"
+                                    />
+                                    DILAN
+                                </td>
+                                <td class="p2p-price">
+                                    2.00
+                                    <p>$2.00</p>
+                                </td>
+                                <td class="p2p-available">43,560.00 USDT</td>
+                                <td class="p2p-bank">BANK</td>
+                                <td>
+                                    <button class="trade-btn">Купить</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="p2p-maker">
+                                    <img
+                                        src="../images/avatars/artem.jpg"
+                                        alt="ava"
+                                    />
+                                    GLORP
+                                </td>
+                                <td class="p2p-price">
+                                    1.50
+                                    <p>$1.50</p>
+                                </td>
+                                <td class="p2p-available">3,400.00 USDT</td>
+                                <td class="p2p-bank">BANK</td>
+                                <td>
+                                    <button class="trade-btn">Купить</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="p2p-maker">
+                                    <img
+                                        src="../images/avatars/vadim.png"
+                                        alt="ava"
+                                    />
+                                    BASYA
+                                </td>
+                                <td class="p2p-price">
+                                    1.25
+                                    <p>$1.25</p>
+                                </td>
+                                <td class="p2p-available">7,300.00 USDT</td>
+                                <td class="p2p-bank">BANK</td>
+                                <td>
+                                    <button class="trade-btn">Купить</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <a href="" class="p2p-url"
+                    >Перейти к полному списку
+                    <svg
+                        width="10"
+                        height="10"
+                        viewBox="0 0 10 10"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                    >
+                        <path
+                            d="M0.103957 8.71646C-0.0873235 8.43351 -0.0146371 8.20445 0.322016 8.02929L6.79493 4.81577V5.12904L0.322016 1.97615C-0.0069859 1.80099 -0.0796723 1.56857 0.103957 1.27888C0.295237 0.989191 0.555378 0.92519 0.884379 1.08688L7.59831 4.38124C7.8661 4.51598 8 4.70798 8 4.95725C8 5.24694 7.8661 5.45578 7.59831 5.58378L0.884379 8.90846C0.555378 9.07689 0.295237 9.01289 0.103957 8.71646Z"
+                            fill="currentColor"
+                        />
+                    </svg>
+                </a>
+            </section>
+        </main>
+        <footer>
+            <div class="footer-columns">
+                <section class="footer-col">
+                    <h3>Сообщество</h3>
+                    <ul class="community-list">
+                        <li>
+                            <a href=""
+                                ><img
+                                    src="../images/icons/discord-icon.svg"
+                                    alt="discord"
+                            /></a>
+                        </li>
+                        <li>
+                            <a href=""
+                                ><img
+                                    src="../images/icons/telegram-icon.svg"
+                                    alt="telegram"
+                            /></a>
+                        </li>
+                        <li>
+                            <a href=""
+                                ><img
+                                    src="../images/icons/tiktok-icon.svg"
+                                    alt="tiktok"
+                            /></a>
+                        </li>
+                        <li>
+                            <a href=""
+                                ><img
+                                    src="../images/icons/x-twitter-icon.svg"
+                                    alt="x-twitter"
+                            /></a>
+                        </li>
+                        <li>
+                            <a href=""
+                                ><img
+                                    src="../images/icons/youtube-icon.svg"
+                                    alt="youtube"
+                            /></a>
+                        </li>
+                    </ul>
+                </section>
+                <section class="footer-col">
+                    <h3>О нас</h3>
+                    <ul>
+                        <li><a href="">О нас</a></li>
+                        <li><a href="./news.html">Новости</a></li>
+                        <li><a href="">Вакансии</a></li>
+                        <li><a href="">Сообщество</a></li>
+                    </ul>
+                </section>
+                <section class="footer-col">
+                    <h3>Информация</h3>
+                    <ul>
+                        <li><a href="">Конфиденциальность</a></li>
+                        <li><a href="">Условия использования</a></li>
+                        <li><a href="">Предупреждение о рисках</a></li>
+                    </ul>
+                </section>
+            </div>
+            <div class="footer-bottom">
+                <p>NEONCrypto© 2025</p>
+            </div>
+        </footer>
+        <script src="../js/burger.js"></script>
+        <script src="../js/buy-sale.js"></script>
+    </body>
+</html>

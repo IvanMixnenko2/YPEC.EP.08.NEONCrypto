@@ -1,0 +1,314 @@
+@import url("https://fonts.googleapis.com/css2?family=Jura:wght@300..700&display=swap");
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Jura", sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #0a0e17;
+    background-size: cover;
+    background-position: center;
+}
+main {
+    flex: 1 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+.login-form {
+    max-width: 500px;
+    width: 100%;
+    background: #11161f;
+    color: #fff;
+    font-size: 24px;
+    border-radius: 25px;
+    padding: 30px;
+    box-shadow: 0 0 10px #00f5ff4d;
+}
+.buy-form {
+    padding: 30px;
+    color: #fff;
+    font-size: 24px;
+}
+.logo-container {
+    margin-bottom: 30px;
+}
+
+.login-form h1 {
+    font-size: 48px;
+    font-weight: 100;
+    margin-bottom: 20px;
+}
+
+.input-box {
+    width: 100%;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.input-box label {
+    margin-bottom: 5px;
+}
+.input-box input {
+    width: 100%;
+    height: 70px;
+    border: none;
+    border: solid 3px #09858f;
+    outline: none;
+    background: transparent;
+    border-radius: 10px;
+    font-size: 24px;
+    color: #fff;
+    padding-left: 21px;
+    transition: border-color 200ms;
+}
+.input-box input::placeholder {
+    color: #ffffff80;
+}
+.input-box textarea {
+    width: 100%;
+    resize: none;
+    height: 171px;
+    border: none;
+    border: solid 3px #09858f;
+    outline: none;
+    background: transparent;
+    border-radius: 10px;
+    font-size: 24px;
+    color: #fff;
+    padding: 21px;
+    transition: border-color 200ms;
+}
+.input-box textarea::-webkit-scrollbar {
+    width: 18px;
+}
+.input-box textarea::-webkit-scrollbar-thumb {
+    background: #0f2c35;
+    border: 3px solid transparent;
+    background-clip: content-box;
+    border-radius: 10px;
+}
+.input-box textarea::-webkit-scrollbar-track {
+    background: transparent;
+}
+.input-box textarea::-webkit-scrollbar-button:vertical:start:decrement,
+.input-box textarea::-webkit-scrollbar-button:vertical:end:increment {
+    appearance: none;
+}
+.input-box input:-webkit-autofill,
+.input-box input:-webkit-autofill:hover,
+.input-box input:-webkit-autofill:focus {
+    -webkit-text-fill-color: white;
+    -webkit-box-shadow: 0 0 0px 1000px transparent inset;
+    transition: background-color 5000s ease-in-out 0s;
+}
+
+.input-box .password-container {
+    position: relative;
+}
+.input-box .toggle-password {
+    color: #09858f;
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    border: none;
+    background: none;
+    display: flex;
+    align-items: center;
+    top: 50%;
+    right: 0;
+    transform: translate(-20px, -50%);
+    transition: color 200ms;
+}
+.input-box select.select-coin {
+    width: 150px;
+    height: 80%;
+    border: none;
+    outline: none;
+    background: transparent;
+    border-left: 3px solid #0f2c35;
+    font-size: 18px;
+    color: #fff;
+    padding-left: 21px;
+    background-image: url("../images/icons/arrow-icon-wallet.svg");
+    background-repeat: no-repeat;
+    appearance: none;
+    background-position: calc(100% - 17px);
+    margin-left: 10px;
+}
+.input-box .input-summ {
+    height: 100px;
+    border: none;
+}
+
+.remember-forgot {
+    display: flex;
+    justify-content: space-between;
+    color: #ffffff80;
+    margin-bottom: 20px;
+    height: 22px;
+    align-items: center;
+}
+
+.remember-forgot input {
+    appearance: none;
+    -webkit-appearance: none;
+    width: 20px;
+    height: 20px;
+    background: transparent;
+    border: solid 3px #09858f;
+    border-radius: 5px;
+    margin-right: 12px;
+    cursor: pointer;
+    position: relative;
+    transition: border-color 200ms;
+}
+
+.remember-forgot input {
+    appearance: none;
+    -webkit-appearance: none;
+    width: 20px;
+    height: 20px;
+    background: transparent;
+    border: solid 3px #09858f;
+    border-radius: 5px;
+    margin-right: 12px;
+    cursor: pointer;
+    position: relative;
+}
+.input-summ-container {
+    display: flex;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    height: 100px;
+    border: none;
+    border: solid 3px #09858f;
+    outline: none;
+    background: transparent;
+    border-radius: 10px;
+    font-size: 24px;
+    color: #fff;
+}
+option {
+    background: #11161f;
+    font-size: 18px;
+}
+@media (hover: hover) {
+    .submit-button:hover {
+        background-color: #00f5ff1a;
+    }
+    .input-box .toggle-password:hover {
+        color: #03b0b9;
+    }
+    .input-box input:hover {
+        border-color: #03b0b9;
+    }
+    .remember-forgot input:hover {
+        border-color: #03b0b9;
+    }
+}
+@media (hover: none) {
+    .submit-button:active {
+        background-color: #00f5ff33;
+    }
+}
+.submit-button:active {
+    background-color: #00f5ff33;
+}
+.input-box input:focus {
+    border: solid 3px #00f5ff;
+}
+.input-box .input-summ:focus {
+    border: none;
+}
+
+.remember-forgot input:checked {
+    border-color: #00f5ff;
+}
+.remember-forgot input:checked::before {
+    content: "✔";
+    position: absolute;
+    color: #00f5ff;
+    font-size: 14px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.remember-forgot a {
+    color: #ffffff80;
+    text-decoration: none;
+}
+.remember-forgot a:hover {
+    text-decoration: underline;
+}
+
+.submit-button {
+    width: 100%;
+    height: 70px;
+    font-size: 32px;
+    color: #00f5ff;
+    background: transparent;
+    border: solid 3px #00f5ff;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    transition: background-color 200ms;
+}
+
+.register-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff80;
+}
+
+.register-link a {
+    color: #fff;
+    text-decoration: none;
+}
+.register-link a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 500px) {
+    .form-logo {
+        width: 100%;
+    }
+    .remember-forgot {
+        font-size: 16px;
+    }
+    .remember-forgot label {
+        display: flex;
+        align-items: center;
+    }
+    .register-link {
+        font-size: 16px;
+    }
+    .input-box input {
+        font-size: 20px;
+        height: 60px;
+    }
+    .input-box textarea {
+        font-size: 20px;
+    }
+    .input-summ-container {
+        height: 70px;
+    }
+    .submit-button {
+        height: 60px;
+        font-size: 24px;
+    }
+    .input-box select.select-coin {
+        font-size: 14px;
+        padding-left: 10px;
+    }
+}

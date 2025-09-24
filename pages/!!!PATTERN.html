@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>NEONCrypto</title>
+        <link rel="stylesheet" href="../css/global.css" />
+        <link rel="icon" href="../images/favico.ico" type="image/x-icon" />
+    </head>
+    <body>
+        <header>
+            <div class="header-leftside">
+                <a href="./index.html">
+                    <img
+                        src="../images/Logo.svg"
+                        alt="NEONCrypto"
+                        class="header-logo"
+                    />
+                </a>
+                <nav>
+                    <ul class="menu">
+                        <li><a href="./trade.html">Торговля</a></li>
+                        <li><a href="./analytics.html">Аналитика</a></li>
+                        <li><a href="./news.html">Новости</a></li>
+                        <li><a href="./markets.html">Рынки</a></li>
+                        <li><a href="./support.html">Поддержка</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="header-rightside">
+                <button
+                    class="auth-button not-mobile"
+                    onclick="window.location.href = './forms/login.html'"
+                >
+                    Авторизация
+                </button>
+                <div class="burger-toggle" id="burger-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <nav class="mobile-menu" id="mobile-menu">
+                    <ul>
+                        <li>
+                            <button
+                                class="auth-button"
+                                onclick="window.location.href = './forms/login.html'"
+                            >
+                                Авторизация
+                            </button>
+                        </li>
+                        <li><a href="./trade.html">Торговля</a></li>
+                        <li><a href="./analytics.html">Аналитика</a></li>
+                        <li><a href="./news.html">Новости</a></li>
+                        <li><a href="./markets.html">Рынки</a></li>
+                        <li><a href="./support.html">Поддержка</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="overlay" id="overlay"></div>
+        </header>
+        <main></main>
+        <footer>
+            <div class="footer-columns">
+                <section class="footer-col">
+                    <h3>Сообщество</h3>
+                    <ul class="community-list">
+                        <li>
+                            <a href=""
+                                ><img
+                                    src="../images/icons/discord-icon.svg"
+                                    alt="discord"
+                            /></a>
+                        </li>
+                        <li>
+                            <a href=""
+                                ><img
+                                    src="../images/icons/telegram-icon.svg"
+                                    alt="telegram"
+                            /></a>
+                        </li>
+                        <li>
+                            <a href=""
+                                ><img
+                                    src="../images/icons/tiktok-icon.svg"
+                                    alt="tiktok"
+                            /></a>
+                        </li>
+                        <li>
+                            <a href=""
+                                ><img
+                                    src="../images/icons/x-twitter-icon.svg"
+                                    alt="x-twitter"
+                            /></a>
+                        </li>
+                        <li>
+                            <a href=""
+                                ><img
+                                    src="../images/icons/youtube-icon.svg"
+                                    alt="youtube"
+                            /></a>
+                        </li>
+                    </ul>
+                </section>
+                <section class="footer-col">
+                    <h3>О нас</h3>
+                    <ul>
+                        <li><a href="">О нас</a></li>
+                        <li><a href="./news.html">Новости</a></li>
+                        <li><a href="">Вакансии</a></li>
+                        <li><a href="">Сообщество</a></li>
+                    </ul>
+                </section>
+                <section class="footer-col">
+                    <h3>Информация</h3>
+                    <ul>
+                        <li><a href="">Конфиденциальность</a></li>
+                        <li><a href="">Условия использования</a></li>
+                        <li><a href="">Предупреждение о рисках</a></li>
+                    </ul>
+                </section>
+            </div>
+            <div class="footer-bottom">
+                <p>NEONCrypto© 2025</p>
+            </div>
+        </footer>
+        <script src="../js/burger.js"></script>
+    </body>
+</html>

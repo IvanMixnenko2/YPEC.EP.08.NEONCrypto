@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>NEONCrypto</title>
+        <link rel="stylesheet" href="../css/global.css" />
+        <link rel="stylesheet" href="../css/forms.css" />
+        <link rel="icon" href="../images/favico.ico" type="image/x-icon" />
+        <link rel="icon" href="../images/favico.svg" type="image/x-icon" />
+    </head>
+    <body>
+        <header>
+            <div class="header-leftside">
+                <a href="../index.html">
+                    <img
+                        src="../images/Logo.svg"
+                        alt="NEONCrypto"
+                        class="header-logo"
+                    />
+                </a>
+                <nav>
+                    <ul class="menu">
+                        <li><a href="./trade.html">Торговля</a></li>
+                        <li><a href="./analytics.html">Аналитика</a></li>
+                        <li><a href="./news.html">Новости</a></li>
+                        <li><a href="./markets.html">Рынки</a></li>
+                        <li>
+                            <a href="./support.html" class="active-page-title"
+                                >Поддержка</a
+                            >
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="header-rightside">
+                <button
+                    class="auth-button not-mobile"
+                    onclick="window.location.href = './forms/login.html'"
+                >
+                    Авторизация
+                </button>
+                <div class="burger-toggle" id="burger-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <nav class="mobile-menu" id="mobile-menu">
+                    <ul>
+                        <li>
+                            <button
+                                class="auth-button"
+                                onclick="window.location.href = './forms/login.html'"
+                            >
+                                Авторизация
+                            </button>
+                        </li>
+                        <li><a href="./trade.html">Торговля</a></li>
+                        <li><a href="./analytics.html">Аналитика</a></li>
+                        <li><a href="./news.html">Новости</a></li>
+                        <li><a href="./markets.html">Рынки</a></li>
+                        <li>
+                            <a href="./support.html" class="active-page-title"
+                                >Поддержка</a
+                            >
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="overlay" id="overlay"></div>
+        </header>
+        <main>
+            <section class="layout">
+                <h2 class="first-layout-title">Часто задаваемые вопросы</h2>
+                <details>
+                    <summary>Как начать торговать на платформе?</summary>
+                    <div>
+                        <p>
+                            Зарегистрируйтесь на сайте, пройдите верификацию
+                            (KYC), пополните свой баланс в разделе
+                            <a href="./wallet.html">Кошелек</a>, и выберите
+                            подходящую торговую пару в разделе
+                            <a href="./trade.html">Торговля</a>
+                        </p>
+                    </div>
+                </details>
+                <details>
+                    <summary>Какие комиссии взимаются при торговле?</summary>
+                    <div>
+                        <p>
+                            Размер комиссии зависит от вашего торгового объема
+                            за последние 30 дней.
+                        </p>
+                    </div>
+                </details>
+                <details>
+                    <summary>
+                        Как обеспечена безопасность моих средств и данных?
+                    </summary>
+                    <div>
+                        <p>
+                            Мы используем передовые методы защиты, включая
+                            двухфакторную аутентификацию (2FA), холодное
+                            хранение большинства средств, и регулярные аудиты
+                            безопасности.
+                        </p>
+                    </div>
+                </details>
+                <details>
+                    <summary>
+                        Что делать, если я забыл пароль от аккаунта?
+                    </summary>
+                    <div>
+                        <p>
+                            Воспользуйтесь функцией "Забыли пароль?" на странице
+                            входа. Вам будет отправлено письмо с инструкциями по
+                            сбросу пароля на электронную почту, указанную при
+                            регистрации.
+                        </p>
+                    </div>
+                </details>
+                <details>
+                    <summary>Какие криптовалюты доступны для торговли?</summary>
+                    <div>
+                        <p>
+                            На NEONCrypto доступен широкий выбор криптовалют,
+                            включая Bitcoin (BTC), Ethereum (ETH), Litecoin
+                            (LTC) и другие. Полный список доступен на странице
+                            <a href="./markets.html">Рынки</a>
+                        </p>
+                    </div>
+                </details>
+            </section>
+            <section class="layout support-form-layout">
+                <h2 class="layout-title">Обратная связь</h2>
+                <form action="">
+                    <div class="input-box">
+                        <label for="email">Адрес эл. почты</label>
+                        <input id="email" type="email" required />
+                    </div>
+                    <div class="input-box">
+                        <label for="theme">Тема сообщения</label>
+                        <input id="theme" type="text" />
+                    </div>
+                    <div class="input-box">
+                        <label for="message">Текст сообщения</label>
+                        <textarea id="message"></textarea>
+                    </div>
+                    <button
+                        type="submit"
+                        class="submit-button"
+                        id="login-buttom"
+                    >
+                        Отправить
+                    </button>
+                </form>
+            </section>
+        </main>
+        <footer>
+            <div class="footer-columns">
+                <section class="footer-col">
+                    <h3>Сообщество</h3>
+                    <ul class="community-list">
+                        <li>
+                            <a href=""
+                                ><img
+                                    src="../images/icons/discord-icon.svg"
+                                    alt="discord"
+                            /></a>
+                        </li>
+                        <li>
+                            <a href=""
+                                ><img
+                                    src="../images/icons/telegram-icon.svg"
+                                    alt="telegram"
+                            /></a>
+                        </li>
+                        <li>
+                            <a href=""
+                                ><img
+                                    src="../images/icons/tiktok-icon.svg"
+                                    alt="tiktok"
+                            /></a>
+                        </li>
+                        <li>
+                            <a href=""
+                                ><img
+                                    src="../images/icons/x-twitter-icon.svg"
+                                    alt="x-twitter"
+                            /></a>
+                        </li>
+                        <li>
+                            <a href=""
+                                ><img
+                                    src="../images/icons/youtube-icon.svg"
+                                    alt="youtube"
+                            /></a>
+                        </li>
+                    </ul>
+                </section>
+                <section class="footer-col">
+                    <h3>О нас</h3>
+                    <ul>
+                        <li><a href="">О нас</a></li>
+                        <li><a href="./news.html">Новости</a></li>
+                        <li><a href="">Вакансии</a></li>
+                        <li><a href="">Сообщество</a></li>
+                    </ul>
+                </section>
+                <section class="footer-col">
+                    <h3>Информация</h3>
+                    <ul>
+                        <li><a href="">Конфиденциальность</a></li>
+                        <li><a href="">Условия использования</a></li>
+                        <li><a href="">Предупреждение о рисках</a></li>
+                    </ul>
+                </section>
+            </div>
+            <div class="footer-bottom">
+                <p>NEONCrypto© 2025</p>
+            </div>
+        </footer>
+        <script src="../js/burger.js"></script>
+    </body>
+</html>

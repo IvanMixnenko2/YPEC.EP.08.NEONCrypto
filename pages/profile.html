@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>NEONCrypto</title>
+        <link rel="stylesheet" href="../css/global.css" />
+        <link rel="icon" href="../images/favico.ico" type="image/x-icon" />
+        <link rel="icon" href="../images/favico.svg" type="image/x-icon" />
+    </head>
+    <body>
+        <header>
+            <div class="header-leftside">
+                <a href="../index.html">
+                    <img
+                        src="../images/Logo.svg"
+                        alt="NEONCrypto"
+                        class="header-logo"
+                    />
+                </a>
+                <nav>
+                    <ul class="menu">
+                        <li><a href="./trade.html">Торговля</a></li>
+                        <li><a href="./analytics.html">Аналитика</a></li>
+                        <li><a href="./news.html">Новости</a></li>
+                        <li><a href="./markets.html">Рынки</a></li>
+                        <li><a href="./support.html">Поддержка</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="header-rightside">
+                <button
+                    class="profile-button not-mobile"
+                    onclick="window.location.href = './profile.html'"
+                >
+                    Профиль
+                    <img
+                        src="../images/default-profile-photo.svg"
+                        alt="avatar"
+                    />
+                </button>
+                <div class="burger-toggle" id="burger-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <nav class="mobile-menu" id="mobile-menu">
+                    <ul>
+                        <li><a href="./profile.html">Профиль</a></li>
+                        <li><a href="./wallet.html">Кошелек</a></li>
+                        <li><a href="./trade.html">Торговля</a></li>
+                        <li><a href="./analytics.html">Аналитика</a></li>
+                        <li><a href="./news.html">Новости</a></li>
+                        <li><a href="./markets.html">Рынки</a></li>
+                        <li><a href="./support.html">Поддержка</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="overlay" id="overlay"></div>
+        </header>
+        <main>
+            <div class="profile-wrapper">
+                <section class="layout profile-layout">
+                    <img
+                        src="../images/default-profile-photo.svg"
+                        alt="Profile Photo"
+                        class="profile-image"
+                    />
+                    <button class="profile-settings-button">
+                        Редактировать профиль
+                    </button>
+                    <div class="profile-information">
+                        <h3>Общее</h3>
+                        <div class="profile-information-item">
+                            <span class="info-title">Имя</span>
+                            <span>USER_0042</span>
+                        </div>
+                        <div class="profile-information-item">
+                            <span class="info-title">UID</span>
+                            <span>12424246234</span>
+                        </div>
+                        <div class="profile-information-item">
+                            <span class="info-title">Био</span>
+                            <span>...</span>
+                        </div>
+                        <h3>Конфиденциальные</h3>
+                        <div class="profile-information-item">
+                            <span class="info-title">Почта</span>
+                            <span>user42@gmail.com</span>
+                        </div>
+                        <div class="profile-information-item">
+                            <span class="info-title">Пароль</span>
+                            <span>Показать пароль</span>
+                        </div>
+                        <h3>Верификация</h3>
+
+                        <span class="profile-information-item-one"
+                            >Аккаунт не верифицирован</span
+                        >
+
+                        <button class="profile-settings-button">
+                            Верифицировать
+                        </button>
+                        <h3>P2P</h3>
+                        <button class="profile-settings-button">
+                            Подключить 2FA
+                        </button>
+                    </div>
+                </section>
+                <div class="pre-wallet-wrapper">
+                    <section class="layout pre-wallet-container">
+                        <div class="pre-wallet-row">
+                            <div class="wallet-title">
+                                <label for="wallet-eye"><h2>Кошелек</h2></label>
+
+                                <button class="toggle-wallet" id="wallet-eye">
+                                    <svg
+                                        width="40"
+                                        height="40"
+                                        viewBox="0 0 40 40"
+                                        fill="none"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                    >
+                                        <path
+                                            d="M10.5965 13.2368C8.1698 15.3502 6.3548 17.9618 5.09146 20.0002C6.3548 22.0385 8.1698 24.6502 10.5965 26.7635C13.0581 28.9052 16.1398 30.5285 19.9131 30.5285C23.6848 30.5285 26.7681 28.9052 29.2298 26.7618C31.6565 24.6502 33.4698 22.0385 34.7348 20.0002C33.4698 17.9618 31.6565 15.3502 29.2281 13.2368C26.7681 11.0952 23.6865 9.47183 19.9115 9.47183C16.1398 9.47183 13.0581 11.0952 10.5965 13.2368ZM2.14146 18.3268C4.6298 14.2935 10.3081 6.0835 19.9131 6.0835C29.5181 6.0835 35.1965 14.2935 37.6848 18.3268C37.9955 18.8297 38.1601 19.4091 38.1601 20.0002C38.1601 20.5912 37.9955 21.1707 37.6848 21.6735C35.1965 25.7068 29.5181 33.9168 19.9131 33.9168C10.3081 33.9168 4.6298 25.7068 2.14146 21.6718C1.83127 21.1691 1.66699 20.59 1.66699 19.9993C1.66699 19.4086 1.83127 18.8295 2.14146 18.3268ZM19.9131 17.1102C19.1469 17.1102 18.412 17.4146 17.8702 17.9564C17.3284 18.4982 17.024 19.2331 17.024 19.9993C17.024 20.7656 17.3284 21.5005 17.8702 22.0423C18.412 22.5841 19.1469 22.8885 19.9131 22.8885C20.6792 22.8885 21.4138 22.5842 21.9555 22.0425C22.4972 21.5009 22.8015 20.7662 22.8015 20.0002C22.8015 19.2341 22.4972 18.4995 21.9555 17.9578C21.4138 17.4161 20.6792 17.1118 19.9131 17.1118V17.1102ZM13.6331 20.0002C13.6331 18.335 14.2946 16.7381 15.472 15.5607C16.6494 14.3833 18.2463 13.7218 19.9115 13.7218C21.5766 13.7218 23.1735 14.3833 24.3509 15.5607C25.5283 16.7381 26.1898 18.335 26.1898 20.0002C26.1898 21.6653 25.5283 23.2622 24.3509 24.4396C23.1735 25.617 21.5766 26.2785 19.9115 26.2785C18.2463 26.2785 16.6494 25.617 15.472 24.4396C14.2946 23.2622 13.6331 21.6653 13.6331 20.0002Z"
+                                            fill="currentColor"
+                                        />
+                                    </svg>
+                                </button>
+                            </div>
+                            <a href="./wallet.html" class="pre-wallet-more">
+                                Подробнее
+                                <svg
+                                    width="20"
+                                    height="20"
+                                    viewBox="0 0 10 10"
+                                    fill="none"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                >
+                                    <path
+                                        d="M0.103957 8.71646C-0.0873235 8.43351 -0.0146371 8.20445 0.322016 8.02929L6.79493 4.81577V5.12904L0.322016 1.97615C-0.0069859 1.80099 -0.0796723 1.56857 0.103957 1.27888C0.295237 0.989191 0.555378 0.92519 0.884379 1.08688L7.59831 4.38124C7.8661 4.51598 8 4.70798 8 4.95725C8 5.24694 7.8661 5.45578 7.59831 5.58378L0.884379 8.90846C0.555378 9.07689 0.295237 9.01289 0.103957 8.71646Z"
+                                        fill="currentColor"
+                                    />
+                                </svg>
+                            </a>
+                        </div>
+                        <div class="pre-wallet-row">
+                            <div>
+                                <p class="balance" id="balance">$0.00</p>
+                                <p class="btc-balance" id="btc-balance">
+                                    ≈0.00000000 BTC
+                                </p>
+                            </div>
+
+                            <button class="wallet-btn">Пополнить</button>
+                        </div>
+                    </section>
+                    <section class="layout pre-transaction-container">
+                        <h2 class="layout-title">Недавние транзацакции</h2>
+                        <div class="pre-transaction-table-container">
+                            <table class="pre-transaction-table">
+                                <thead>
+                                    <th class="pre-transaction-title-action">
+                                        Действие
+                                    </th>
+                                    <th class="pre-transaction-title-value">
+                                        Сумма
+                                    </th>
+                                    <th class="pre-transaction-title-data-time">
+                                        Дата и время
+                                    </th>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="pre-transaction-action">
+                                            Вывод
+                                        </td>
+                                        <td
+                                            class="pre-transaction-value percent-down"
+                                        >
+                                            -$42.0
+                                        </td>
+                                        <td class="pre-transaction-data-time">
+                                            12.09.2025 13:55:23
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="pre-transaction-action">
+                                            Пополнение
+                                        </td>
+                                        <td
+                                            class="pre-transaction-value percent-up"
+                                        >
+                                            +$42.0
+                                        </td>
+                                        <td class="pre-transaction-data-time">
+                                            12.09.2025 13:42:17
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="pre-transaction-more">
+                            <a href="./wallet.html#transaction"
+                                >Полный список<svg
+                                    width="20"
+                                    height="20"
+                                    viewBox="0 0 20 20"
+                                    fill="none"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                >
+                                    <path
+                                        d="M2.20791 17.4332C1.82535 16.8673 1.97073 16.4092 2.64403 16.0588L15.5899 9.63179V10.2583L2.64403 3.95255C1.98603 3.60223 1.84066 3.13738 2.20791 2.558C2.59047 1.97863 3.11076 1.85062 3.76876 2.174L17.1966 8.76273C17.7322 9.0322 18 9.41621 18 9.91474C18 10.4941 17.7322 10.9118 17.1966 11.1678L3.76876 17.8172C3.11076 18.154 2.59047 18.026 2.20791 17.4332Z"
+                                        fill="currentColor"
+                                    />
+                                </svg>
+                            </a>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </main>
+        <footer>
+            <div class="footer-columns">
+                <section class="footer-col">
+                    <h3>Сообщество</h3>
+                    <ul class="community-list">
+                        <li>
+                            <a href=""
+                                ><img
+                                    src="../images/icons/discord-icon.svg"
+                                    alt="discord"
+                            /></a>
+                        </li>
+                        <li>
+                            <a href=""
+                                ><img
+                                    src="../images/icons/telegram-icon.svg"
+                                    alt="telegram"
+                            /></a>
+                        </li>
+                        <li>
+                            <a href=""
+                                ><img
+                                    src="../images/icons/tiktok-icon.svg"
+                                    alt="tiktok"
+                            /></a>
+                        </li>
+                        <li>
+                            <a href=""
+                                ><img
+                                    src="../images/icons/x-twitter-icon.svg"
+                                    alt="x-twitter"
+                            /></a>
+                        </li>
+                        <li>
+                            <a href=""
+                                ><img
+                                    src="../images/icons/youtube-icon.svg"
+                                    alt="youtube"
+                            /></a>
+                        </li>
+                    </ul>
+                </section>
+                <section class="footer-col">
+                    <h3>О нас</h3>
+                    <ul>
+                        <li><a href="">О нас</a></li>
+                        <li><a href="./news.html">Новости</a></li>
+                        <li><a href="">Вакансии</a></li>
+                        <li><a href="">Сообщество</a></li>
+                    </ul>
+                </section>
+                <section class="footer-col">
+                    <h3>Информация</h3>
+                    <ul>
+                        <li><a href="">Конфиденциальность</a></li>
+                        <li><a href="">Условия использования</a></li>
+                        <li><a href="">Предупреждение о рисках</a></li>
+                    </ul>
+                </section>
+            </div>
+            <div class="footer-bottom">
+                <p>NEONCrypto© 2025</p>
+            </div>
+        </footer>
+        <script src="../js/burger.js"></script>
+        <script src="../js/balance.js"></script>
+    </body>
+</html>
